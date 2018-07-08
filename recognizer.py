@@ -21,6 +21,7 @@ xscroll.config(command=canvas.xview)
 yscroll.config(command=canvas.yview)
 frame.pack(fill=BOTH,expand=1)
 
+#load every photos
 imlist = [ [None] * 16 for i in range(51) ]
 for i in range(1,51):
     for j in (1,2,3,4,6,7,8,10,11,12,13,14,15):
@@ -35,6 +36,7 @@ for i in range(1,51):
             else:
                 imlist[i][j] = Image.open('Face Database/'+'s'+str(i)+'_'+str(j)+'.jpg')
 #imlist[50][15].show()
+
 
 #function to be called when mouse is clicked
 
