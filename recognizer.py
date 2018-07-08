@@ -2,11 +2,10 @@ from tkinter import *
 from tkinter import filedialog
 from PIL import Image, ImageTk
 import os
-
 add = os.getcwd()
 
-root = Tk()
 
+root = Tk()
 #setting up a tkinter canvas with scrollbars
 frame = Frame(root, bd=2, relief=SUNKEN)
 frame.grid_rowconfigure(0, weight=1)
@@ -37,11 +36,18 @@ imlist = [ [None] * 16 for i in range(51) ]
 for i in range(1,51):
     for j in (1,2,3,4,6,7,8,10,11,12,13,14,15):
         if (i < 10):
-            if(j < 5):
+            if(j < 10):
                 imlist[i][j] = Image.open('Face Database/'+'s0'+str(i)+'_0'+str(j)+'.jpg')
+            else:
+                imlist[i][j] = Image.open('Face Database/'+'s0'+str(i)+'_'+str(j)+'.jpg')
+        else:
+            if(j < 10):
+                imlist[i][j] = Image.open('Face Database/'+'s'+str(i)+'_0'+str(j)+'.jpg')
+            else:
+                imlist[i][j] = Image.open('Face Database/'+'s'+str(i)+'_'+str(j)+'.jpg')
 print('XD')
 
-
+imlist[50][15].show()
 
 
 root.mainloop()
