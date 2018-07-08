@@ -1,4 +1,2 @@
-Data Input : 完成  
-Data Training :  
-Data Testing :  
-System Documentation :  
+coding
+具體情況請參考recognizer.py
