@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import filedialog
 from PIL import Image, ImageTk
+import os
+add = os.getcwd()
 
 if __name__ == "__main__":
     root = Tk()
@@ -22,10 +24,19 @@ if __name__ == "__main__":
 
     #function to be called when mouse is clicked
     def printcoords():
-        File = filedialog.askopenfilename(parent=root, initialdir="C:/",title='Choose an image.')
+        File = filedialog.askopenfilename(parent=root, initialdir=add,title='Choose an image.')
         filename = ImageTk.PhotoImage(Image.open(File))
         canvas.image = filename  # <--- keep reference of your image
         canvas.create_image(0,0,anchor='nw',image=filename)
 
     Button(root,text='choose',command=printcoords).pack()
     root.mainloop()
+
+imlist = [ [None] * 16 for i in range(51) ]
+
+for i in range(1,51):
+    for j in (1,2,3,4,6,7,8,10,11,12,13,14,15):
+        if (i < 10):
+            if(j < 5):
+                imlist[i][j] = Image.open('Face Database/'+'s0'+str(i)+'_0'+str(j)+'.jpg')
+print('XD')
