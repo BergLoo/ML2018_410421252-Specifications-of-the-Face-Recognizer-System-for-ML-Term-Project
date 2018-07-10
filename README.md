@@ -1,8 +1,10 @@
 第一次圖片加密解密的作業因為方向做錯有修改
 如果能重新改的話還麻煩看一下這個：https://github.com/BergLoo/ML2018_410421252_Image-Decryption-using-Linear-Percetpron  
-  
-  
-  
+<br />
+<br />
+<br />
+<br />
+<br />
 這次作業：  
 coding  
 具體情況請參考recognizer.py  
